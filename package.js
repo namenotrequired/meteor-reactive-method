@@ -1,6 +1,6 @@
 Package.describe({
   name: 'bartoftutormundi:reactive-method',
-  version: '1.0.3',
+  version: '1.0.4',
   // Brief, one-line summary of the package.
   summary: 'The old and trusted simple:reactive-method, fixed for meteor 1.8 / lodash 4',
   // URL to the Git repository containing the source code for this package.
