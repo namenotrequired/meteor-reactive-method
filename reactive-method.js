@@ -22,7 +22,7 @@ ReactiveMethod = {
    * never return anything.
    *
    * The API for the arguments is exactly the same as Meteor.call.
-   * 
+   *
    * @param {String} methodName The name of the method to call
    * @param {EJSONable} [arg1,arg2...] Optional method arguments
    */
@@ -33,12 +33,12 @@ ReactiveMethod = {
     }
 
     var args = _.toArray(arguments);
-    return ReactiveMethod.apply(methodName, _.rest(args));
+    return ReactiveMethod.apply(methodName, _.tail(args));
   },
 
   /**
    * Just like ReactiveMethod.call except uses the calling API of Meteor.apply
-   * instead of Meteor.call. 
+   * instead of Meteor.call.
    * @param  {[type]} methodName [description]
    * @param  {[type]} methodArgs [description]
    * @return {[type]}            [description]
@@ -62,7 +62,7 @@ ReactiveMethod = {
     if (cc._reactiveMethodData && _.has(cc._reactiveMethodData, serializedArgs)) {
       // We are calling the method again with the same arguments, return the
       // previous result
-      
+
       // Mark this result as used
       delete cc._reactiveMethodStale[serializedArgs];
       methodReturnValue = cc._reactiveMethodData[serializedArgs];

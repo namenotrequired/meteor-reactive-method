@@ -4,7 +4,7 @@
 
 ---------------
 
-**Deprecated: Please fork this package if you would like to continue to work on it, and I'd happily link to it!**
+LAST UPDATED 10 APRIL 2019
 
 ---------------
 
@@ -20,7 +20,7 @@ Template.foo.helpers({
        Meteor.call("myMethod", "a", "b", function (err, result) {
            return result; // this doesn't work!!!
        });
-   } 
+   }
 });
 ```
 
@@ -31,7 +31,7 @@ Template.foo.helpers({
     methodResult: function () {
         // Super fun!
         return ReactiveMethod.call("myMethod", "a", "b");
-        
+
         // Can also use 'apply' style
         // return ReactiveMethod.apply("myMethod", ["a", "b"]);
     }
