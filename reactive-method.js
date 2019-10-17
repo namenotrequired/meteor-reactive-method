@@ -108,7 +108,7 @@ ReactiveMethod = {
    */
   invalidateCall: function (methodName /*, ...arguments */) {
     var args = _.toArray(arguments);
-    ReactiveMethod.invalidateApply(methodName, _.rest(args));
+    ReactiveMethod.invalidateApply(methodName, _.tail(args));
   },
 
   /**
